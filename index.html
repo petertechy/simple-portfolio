@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .portfolio-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .portfolio-card .card-body {
+            height: 150px;
+            overflow: hidden;
+        }
+        .portfolio-card .card-footer {
+            text-align: center;
+        }
+
+        /* Animation for sliding in from the left */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animation for sliding in from the right */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animation for sliding in from the bottom */
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Apply animations to rows */
+        .row:nth-child(1) {
+            animation: slideInLeft 1s ease-out;
+        }
+        .row:nth-child(2) {
+            animation: slideInRight 1s ease-out;
+        }
+        .row:nth-child(3) {
+            animation: slideInUp 1s ease-out;
+        }
+
+        /* Ensure no space between rows */
+        .row {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5 text-success">My Portfolio</h1>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card">
+                    <img src="./media/ozaimage.JPG" class="card-img-top" alt="The Oza Woman Project">
+                    <div class="card-body">
+                        <h5 class="card-title">The Oza Woman</h5>
+                        <p class="card-text">A platform empowering women with resources, information, and support to thrive.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://theozawoman.com/" target="_blank" class="btn btn-success">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card">
+                    <img src="./media/almondimage.JPG" class="card-img-top" alt="Almond Careers Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Almond Careers</h5>
+                        <p class="card-text">A career development platform offering training and resources for professionals.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://almondcareers.com/" target="_blank" class="btn btn-success">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card">
+                    <img src="./media/firmtecimage.JPG" class="card-img-top" alt="Firmtec Global Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Firmtec Global</h5>
+                        <p class="card-text">A technology and consulting company offering innovative solutions to businesses.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.firmtecglobal.com/" target="_blank" class="btn btn-success">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <!-- Card 4 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card">
+                    <img src="./media/realestateimage.JPG" class="card-img-top" alt="Ace Royal Estates Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Ace Royal Estates</h5>
+                        <p class="card-text">A real estate firm specializing in premium properties and client-focused services.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://aceroyalestates.com/" target="_blank" class="btn btn-success">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card">
+                    <img src="./media/deztashaimage.JPG" class="card-img-top" alt="Deztasha Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Deztasha</h5>
+                        <p class="card-text">An e-commerce platform offering fashion and lifestyle products.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://deztasha.com/" target="_blank" class="btn btn-success">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4">
+                <div class="card portfolio-card">
+                    <img src="./media/mckhavenimage.JPG" class="card-img-top" alt="Mckhavens Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Mckhavens</h5>
+                        <p class="card-text">A Travel Opportunity platform offering education, visit, and travel guides.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://mckhavens.firmtecglobal.com/" target="_blank" class="btn btn-success">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
